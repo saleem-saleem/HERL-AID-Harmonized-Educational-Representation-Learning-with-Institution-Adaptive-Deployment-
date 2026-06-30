@@ -1,4 +1,4 @@
-# HERL-AID-Harmonized-Educational-Representation-Learning-with-Institution-Adaptive-Deployment-
+# HERL-AID-Harmonized-Educational-Representation-Learning-with-Institution-Adaptive-Deployment
 HERL-AID: A Fairness-Aware and Institution-Invariant Educational Risk Prediction Framework for Cross-Institution Generalization and Early Academic Intervention.
 
 HERL-AID is a three-stage framework for fair, calibrated, cross-institution student
