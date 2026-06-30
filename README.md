@@ -62,22 +62,8 @@ python scripts/make_figures.py             # all figures (>=300 DPI, vector)
 All randomness is seeded (`--seed`), and every transformation is fit on the training
 partition only (leakage-safe; see `src/preprocessing.py`).
 
-## 4. Mapping from reviewer responses to code
 
-| Reviewer point | Code |
-|----------------|------|
-| Feature harmonization (common schema) | `src/harmonize.py`, `data/feature_mapping_dictionary.csv` |
-| Outcome-label mapping (binary at-risk) | `src/data_loader.py`, `data/label_mapping.csv` |
-| Sensitive-attribute definition (gender) | `data/sensitive_attribute_mapping.csv` |
-| Data-leakage-safe pipeline (fit on train only) | `src/preprocessing.py` |
-| SOTA baselines (DANN, Deep CORAL, FairXGBoost, AD-DNN) | `src/baselines/sota.py` |
-| Module ablation (Table M) | `src/ablation.py` |
-| Hyperparameter sensitivity (λ, α) | `src/sensitivity.py` |
-| Statistical significance (Wilcoxon + Holm) | `src/significance.py` |
-| Mini-batch MMD, linear complexity | `src/mmd.py`, `scripts/complexity_analysis.py` |
-| Three-stage algorithms | `src/stage1_mo_iierl.py`, `src/stage2_igfae.py`, `src/stage3_ceisd.py` |
-
-## 5. Repository layout
+## 4. Repository layout
 
 ```
 herl-aid/
@@ -90,10 +76,53 @@ herl-aid/
 └── results/        generated outputs (csv / json / figures)
 ```
 
-## 6. Citation
+## 5. Applications
 
-See `CITATION.cff`. If you use this code, please cite the paper.
+HERL-AID (Harmonized Educational Risk Learning with Alignment, Invariance, and Debiasing) can be applied in a wide range of educational analytics and student-success initiatives:
 
-## 7. License
+### 🎓 Early Academic Risk Detection
+- Identify students at risk of failure, withdrawal, or non-completion at an early stage.
+- Enable timely academic interventions and personalized support.
 
-Released under the MIT License (see `LICENSE`).
+### 🌐 Cross-Institution Student Performance Prediction
+- Transfer predictive knowledge across institutions with different data distributions.
+- Improve model generalization when deploying to unseen educational environments.
+
+### ⚖️ Fair and Equitable Learning Analytics
+- Reduce demographic disparities in predictive outcomes.
+- Support fairness-aware decision-making across student subgroups.
+
+### 📊 Learning Analytics and Educational Intelligence
+- Analyze engagement, attendance, assessment behavior, and learning patterns.
+- Generate actionable insights for educators and administrators.
+
+### 🏫 Institutional Decision Support
+- Assist academic advisors in identifying students requiring additional support.
+- Support retention planning and student success initiatives.
+
+### 🔄 Domain Generalization in Educational Data Mining
+- Address distribution shifts across universities, colleges, and online learning platforms.
+- Learn institution-invariant representations for robust deployment.
+
+### 📈 Student Retention and Dropout Prevention
+- Predict potential dropouts before academic disengagement becomes severe.
+- Support evidence-based retention strategies.
+
+### 🔍 Explainable Educational AI
+- Provide interpretable predictions through SHAP-based explanations.
+- Increase transparency and trust in AI-assisted educational decision systems.
+
+### 🚀 Scalable Educational AI Deployment
+- Operate on heterogeneous educational datasets with varying feature spaces.
+- Deploy on commodity hardware with optional GPU acceleration.
+
+## Potential Stakeholders
+
+- Educational Institutions
+- Universities and Colleges
+- Academic Advisors
+- Learning Analytics Researchers
+- Educational Policymakers
+- Online Learning Platforms
+- Student Success Centers
+- EdTech Companies
