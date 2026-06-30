@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+data/raw/
+results/*.csv
+results/*.json
+figures/
+*.pt
+.ipynb_checkpoints/
+.DS_Store
