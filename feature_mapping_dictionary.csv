@@ -1,0 +1,7 @@
+construct_group,construct_name,oulad,uci,xapi,hesp,woc2
+C1,Demographic & socioeconomic,"gender;region;imd_band;age_band;disability","sex;age;address;famsize;Medu;Fedu","gender;Nationality;PlaceofBirth;Relation","age;sex;scholarship;parental_status","gender;age_group;entry_category"
+C2,Prior academic background,"num_of_prev_attempts;studied_credits;highest_education","failures;G1;G2;higher;studytime","StageID;GradeID;Semester","hs_type;cumulative_gpa;expected_gpa","prior_credits;entry_qualification"
+C3,Engagement & participation,"sum_click_forumng;sum_click_resource;sum_click_oucontent;sum_click_quiz;sum_click_subpage;sum_click_homepage;sum_click_url","activities;internet;freetime","raisedhands;VisITedResources;AnnouncementsView;Discussion","listening_in_class;taking_notes;attendance","participation_indicator"
+C4,Assessment & submission,"assessment_score;date_submitted;assessment_type","studytime;schoolsup;paid","","weekly_study_hours;midterm_prep;reading_freq","coursework_marks"
+C5,Attendance & temporal regularity,"date_registration;date_unregistration;click_recency","absences;traveltime","StudentAbsenceDays","attendance","enrolment_withdrawal_timing"
+C6,Support & learning environment,"region_support;disability_support","famsup;schoolsup;famrel;guardian","ParentAnsweringSurvey;ParentschoolSatisfaction","work_status;scholarship","funding_support_flag"

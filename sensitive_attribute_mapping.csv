@@ -1,0 +1,6 @@
+dataset,primary_attribute,native_field,encoding,secondary_attributes
+OULAD,gender,gender,"Female=1;Male=0","disability;imd_band;age_band"
+UCI,sex,sex,"Female=1;Male=0","address;Medu;Fedu"
+xAPI,gender,gender,"Female=1;Male=0","Nationality;PlaceofBirth"
+HESP,sex,sex,"Female=1;Male=0","scholarship;parental_education"
+WoC2,gender,gender,"Female=1;Male=0","age_group"

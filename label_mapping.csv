@@ -1,0 +1,6 @@
+dataset,native_outcome,native_values,at_risk_rule,at_risk_class,not_at_risk_class
+OULAD,final_result,"Pass;Fail;Distinction;Withdrawn","final_result in {Fail, Withdrawn}","Fail;Withdrawn","Pass;Distinction"
+UCI,G3,"0-20 (Portuguese scale)","G3 < 10","G3<10","G3>=10"
+xAPI,Class,"Low;Medium;High","Class == Low","Low","Medium;High"
+HESP,course_grade,"failing..AA (confirm)","lowest/failing band","failing_band","passing_bands"
+WoC2,completion_status,"Graduate;Withdraw (confirm)","status == Withdraw","Withdraw","Graduate"
