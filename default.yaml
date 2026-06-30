@@ -1,0 +1,42 @@
+# HERL-AID default configuration
+seed: 42
+device: cuda          # 'cuda' or 'cpu'
+datasets: [oulad, uci, xapi, hesp, woc2]
+common_dim: 64        # D: harmonized representation dimension
+protected_attribute: gender
+
+evaluation:
+  scheme: loio          # leave-one-institution-out cross-validation
+  n_seeds: 5            # repeated runs for mean +/- std and significance tests
+
+preprocessing:          # leakage-safe: all fit on TRAIN only
+  standardize: per_institution
+  outlier_removal: mahalanobis
+  outlier_quantile: 0.95
+  imbalance: class_weight   # cost-sensitive (NOT pooled SMOTE)
+
+stage1_mo_iierl:
+  encoder_hidden: [256, 128, 64]
+  dropout: 0.2
+  activation: relu
+  beta: 0.5             # I(Z;K) institution-invariance weight
+  alpha: 0.3            # cross-institution stability weight  (var_k term)
+  lambda_align: 0.5     # distribution-alignment weight (MMD/CORAL)  -- D_shift
+  eta: 0.2              # I(Z;A) fairness/representation-independence weight
+  gamma: 1.0e-4         # L2 weight on W
+  mmd_bandwidths: [1, 2, 4, 8, 16]
+  coral_weight: 0.5
+  batch_size: 64
+  epochs: 100
+  lr: 1.0e-3
+  weight_decay: 1.0e-4
+  early_stopping_patience: 10
+
+stage2_igfae:
+  base_learners: [logreg, random_forest, xgboost, mlp, gbm]
+  kappa2: 0.3           # fairness weight (Equal-Opportunity variance)
+  weight_temperature: 1.0
+
+stage3_ceisd:
+  shap_background: 200  # background-set size for SHAP (reduce if RAM-limited)
+  eri_components: [risk_prob, engagement_deficit, assessment_deficit]
